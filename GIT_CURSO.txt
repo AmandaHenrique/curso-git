@@ -42,6 +42,11 @@ Dar enter ate concluir (ou se quiser escolha o caminho que vc quer salvar sua ch
 Ir no local que esta salvo a chave e dar um ls 
 vai aparecer id_rsa.pub
 Para saber sua chave dar o comando cat id_rsa.pub
+Adicionar essa chave no meu git colocando como titulo de qual pc é essa chave
 
+Para conectar repositorio local com remoto
+git remote add origin https://github.com/AmandaHenrique/curso-git.git
 
+Depois 
+git push -u origin master - isso serve para subir tudo no meu local para o git 
 
