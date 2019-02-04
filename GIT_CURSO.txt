@@ -1,0 +1,47 @@
+Teste Web - batista.
+
+git log - mostra os commits , quem fez e em qual data
+git shortlog - maneira mais curta
+git shortlog -sn - mais simples ainda com nome e qtd em numeros de commits
+git log --author="Amanda" pesquisar por author
+
+apos git log 
+git show + a hash do commit achado no git log (ele mostrará as mudanças que vc fez , o que foi adicionado e removido)
+
+git diff mostra minha mudança antes que eu commite - o arquivo já tem q existir e estar no estado de modified. Enquanto ele for new file nao adianta
+git diff --name-only - mostra o nome do meu arquivo modificado antes que eu commite
+
+#Usar git diff sempre antes de dar commit#
+
+Caso eu mude o meu arquivo , e digite git diff ou git status, o commit vai estar pendente devido a modificacao. Se eu não quero essa modificacao, posso exclui-la com ## git checkout nomedoarquivo ##
+isso exclui a modificacao do meu arquivo e exclui rastros do git
+
+Caso eu mude meu arquivo, e adicione ele no repositorio, (add), o diff nao me retorna nada , assim como o git status, até por que ele já esta adicionado ao meu repositorio. Ou seja ele esta na etapa de Staged, preparado para o commit. Quando eu mando 
+git reset HEAD nomedoarquivo ele volta essa etapa e não esta mais em staged , o diff volta a retornar mudanças que nao foram adicionadas e o status avisa que nao commitei
+
+Para adicionar e commitar ao mesmo tempo:
+git commit -am "mensagem"
+
+Caso eu tenha feito um commit , e tenha ido errado ou nao quero mais ele ,
+posso usar o git reset --soft --mixed --hard
+(sempre usar isso com a hash do commit anterior ao que vc nao quer mais, para ele voltar 1)
+
+soft - vai matar o commit mas o arquivo ja vai estar em staged pronto para ser commitado novamente
+
+mixed - vai matar o commit e voltar para uma etapa antes do meu staged, ou seja, modified (vermelhinho precisando ser adicionado)
+
+hard - ignora a existência desse commit e manda ele para um limbo 
+
+
+#################
+Para gerar chave(uma por computador para ter acesso ao repositório e conseguir dar push)
+
+inicilaizar um repositorio na sua maquina git init 
+ssh-keygen -t rsa -b 4096 -C "aamandahenrique@hotmail.com" - seu email do git
+Dar enter ate concluir (ou se quiser escolha o caminho que vc quer salvar sua chave)
+Ir no local que esta salvo a chave e dar um ls 
+vai aparecer id_rsa.pub
+Para saber sua chave dar o comando cat id_rsa.pub
+
+
+
