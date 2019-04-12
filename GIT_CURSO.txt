@@ -33,8 +33,12 @@ mixed - vai matar o commit e voltar para uma etapa antes do meu staged, ou seja,
 hard - ignora a existência desse commit e manda ele para um limbo 
 
 *Adicionais da academia2019*
+
 git pull - baixa todas as atualizações que existem no repositorio, que eu ainda não tenho na minha maquina localmente.
 conflito é quando pessoas mudam a mesma parte do codigo com conteudos diferentes. Caso eu tenha mudado uma linha subido tudo e dê um git pull, ira baixar a atualização vai dar conflito.
+
+Apos resolver o conflito - adicionar as alterações e dar um:
+git merge --continue (para continuar , depois abrira um editor salva e sai ou apertar : , isso termina  processo de atualização)
 
 
 
