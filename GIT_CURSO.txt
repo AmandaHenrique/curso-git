@@ -6,18 +6,18 @@ git shortlog -sn - mais simples ainda com nome e qtd em numeros de commits
 git log --author="Amanda" pesquisar por author
 
 apos git log 
-git show + a hash do commit achado no git log (ele mostrar· as mudanÁas que vc fez , o que foi adicionado e removido)
+git show + a hash do commit achado no git log (ele mostrar√° as mudan√ßas que vc fez , o que foi adicionado e removido)
 
-git diff mostra minha mudanÁa antes que eu commite - o arquivo j· tem q existir e estar no estado de modified. Enquanto ele for new file nao adianta
+git diff mostra minha mudan√ßa antes que eu commite - o arquivo j√° tem q existir e estar no estado de modified. Enquanto ele for new file nao adianta
 git diff --name-only - mostra o nome do meu arquivo modificado antes que eu commite
 
 #Usar git diff sempre antes de dar commit#
 
-Caso eu mude o meu arquivo , e digite git diff ou git status, o commit vai estar pendente devido a modificacao. Se eu n„o quero essa modificacao, posso exclui-la com ## git checkout nomedoarquivo ##
+Caso eu mude o meu arquivo , e digite git diff ou git status, o commit vai estar pendente devido a modificacao. Se eu n√£o quero essa modificacao, posso exclui-la com ## git checkout nomedoarquivo ##
 isso exclui a modificacao do meu arquivo e exclui rastros do git
 
-Caso eu mude meu arquivo, e adicione ele no repositorio, (add), o diff nao me retorna nada , assim como o git status, atÈ por que ele j· esta adicionado ao meu repositorio. Ou seja ele esta na etapa de Staged, preparado para o commit. Quando eu mando 
-git reset HEAD nomedoarquivo ele volta essa etapa e n„o esta mais em staged , o diff volta a retornar mudanÁas que nao foram adicionadas e o status avisa que nao commitei
+Caso eu mude meu arquivo, e adicione ele no repositorio, (add), o diff nao me retorna nada , assim como o git status, at√© por que ele j√° esta adicionado ao meu repositorio. Ou seja ele esta na etapa de Staged, preparado para o commit. Quando eu mando 
+git reset HEAD nomedoarquivo ele volta essa etapa e n√£o esta mais em staged , o diff volta a retornar mudan√ßas que nao foram adicionadas e o status avisa que nao commitei
 
 Para adicionar e commitar ao mesmo tempo:
 git commit -am "mensagem"
@@ -30,11 +30,16 @@ soft - vai matar o commit mas o arquivo ja vai estar em staged pronto para ser c
 
 mixed - vai matar o commit e voltar para uma etapa antes do meu staged, ou seja, modified (vermelhinho precisando ser adicionado)
 
-hard - ignora a existÍncia desse commit e manda ele para um limbo 
+hard - ignora a exist√™ncia desse commit e manda ele para um limbo 
+
+*Adicionais da academia2019*
+git pull - baixa todas as atualiza√ß√µes que existem no repositorio, que eu ainda n√£o tenho na minha maquina localmente.
+conflito √© quando pessoas mudam a mesma parte do codigo com conteudos diferentes. Caso eu tenha mudado uma linha subido tudo e d√™ um git pull, ira baixar a atualiza√ß√£o vai dar conflito.
+
 
 
 #################
-Para gerar chave(uma por computador para ter acesso ao repositÛrio e conseguir dar push)
+Para gerar chave(uma por computador para ter acesso ao reposit√≥rio e conseguir dar push)
 
 inicilaizar um repositorio na sua maquina git init 
 ssh-keygen -t rsa -b 4096 -C "aamandahenrique@hotmail.com" - seu email do git
@@ -42,7 +47,7 @@ Dar enter ate concluir (ou se quiser escolha o caminho que vc quer salvar sua ch
 Ir no local que esta salvo a chave e dar um ls 
 vai aparecer id_rsa.pub
 Para saber sua chave dar o comando cat id_rsa.pub
-Adicionar essa chave no meu git colocando como titulo de qual pc È essa chave
+Adicionar essa chave no meu git colocando como titulo de qual pc √© essa chave
 
 Para conectar repositorio local com remoto
 git remote add origin https://github.com/AmandaHenrique/curso-git.git
