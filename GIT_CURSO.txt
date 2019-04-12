@@ -40,7 +40,7 @@ conflito é quando pessoas mudam a mesma parte do codigo com conteudos diferente
 Apos resolver o conflito - adicionar as alterações e dar um:
 git merge --continue (para continuar , depois abrira um editor salva e sai ou apertar : , isso termina  processo de atualização)
 
-
+esc : x
 
 #################
 Para gerar chave(uma por computador para ter acesso ao repositório e conseguir dar push)
